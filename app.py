@@ -8,7 +8,7 @@ def load_models():
     return model
 model=load_models()
 st.title('AI Detector')
-st.subheader('Differentiate between :red[AI] generated and :green[Real] faces',divider='rainbow')
+st.subheader('Differentiate between :red[AI] generated and :green[Real] faces')
 st.write('made by Gautam Sahu:heart:')
 file=st.file_uploader(label='Upload an image',type=['jpg','jpeg','png'])
 st.divider()
@@ -40,7 +40,7 @@ if file is not None:
         prediction_conf=max(prediction[0])
         if predictLabel=='Real':
             labelString = str(f'The image is :green[{predictLabel}] with a confidence rating of :green[{str(int(1000*prediction_conf)/10)}%]')
-            st.subheader(labelString,divider='green')
+            st.subheader(labelString)
         else:
             labelString = str(f'The image is :red[{predictLabel}] with a confidence rating of :red[{str(int(1000*prediction_conf)/10)}%]')
-            st.subheader(labelString,divider='red')
+            st.subheader(labelString)
