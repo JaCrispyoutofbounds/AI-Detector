@@ -11,7 +11,6 @@ st.title('AI Detector')
 st.subheader('Differentiate between :red[AI] generated and :green[Real] faces')
 st.write('made by Gautam Sahu:heart:')
 file=st.file_uploader(label='Upload an image',type=['jpg','jpeg','png'])
-st.divider()
 #preparation through evaluation
 # classes = ['fake','real']
 
